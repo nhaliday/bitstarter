@@ -71,7 +71,6 @@ var checkFile = function(htmlfile, checkfile) {
 
 var checkUrl = function(htmlurl, checkfile) {
     restler.get(htmlurl).on('complete', function(response) {
-        console.error(response);
         outputJson(checkHtml(response, checkfile));
     });
 }
